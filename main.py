@@ -2,4 +2,8 @@
 
 import random
 
+print("Welcome to Blackjack!")
+
 #dealer
+
+
