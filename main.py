@@ -1,1 +1,5 @@
-print("i made a change")
+#final project black jack
+
+import random
+
+#dealer
