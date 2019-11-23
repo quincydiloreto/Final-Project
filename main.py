@@ -22,3 +22,5 @@ cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of D
 #dealing cards
 
 
+
+
