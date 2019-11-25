@@ -3,7 +3,7 @@
 import random
 
 print("Welcome to Blackjack!")
-print("Type Exit to Quit")
+print("-Type Exit to Quit")
 
 #dictionary with cards and values
 cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of Diamonds':4,
@@ -20,7 +20,9 @@ cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of D
  }
 
 #dealing cards
-
-
+deal = random.choice(list(cards.keys()))
+deal1 = random.choice(list(cards.keys()))
+print("Your cards are:", deal, "; ", deal1)
+print("You are at: ", [deal]  + [deal1])
 
 
