@@ -4,6 +4,7 @@ import random
 
 print("Welcome to Blackjack!")
 print("-Type Exit to Quit")
+print("Games Won:", 0)
 
 #dictionary with cards and values
 cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of Diamonds':4,
@@ -20,9 +21,16 @@ cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of D
  }
 
 #dealing cards
+
 deal = random.choice(list(cards.keys()))
 deal1 = random.choice(list(cards.keys()))
 print("Your cards are:", deal, "; ", deal1)
-print("You are at: ", [deal]  + [deal1])
+print("You are at: ", [deal + deal1])
+answer = input("Will you hit or stay? ")
 
+if answer == "hit":
+    deal2 = random.choice(list(cards.keys()))
+    print(deal2)
+else:
+    print("delers turn")
 
