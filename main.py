@@ -3,8 +3,8 @@
 import random
 
 print("Welcome to Blackjack!")
-print("-Type Exit to Quit")
-print("Games Won:", 0)
+win_counter = "Games Won:", 0
+print(win_counter)
 
 #dictionary with cards and values
 cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of Diamonds':4,
@@ -25,12 +25,34 @@ cards = {'Ace of Diamonds':(1,11), '2 of Diamonds':2, '3 of Diamonds':3, '4 of D
 deal = random.choice(list(cards.keys()))
 deal1 = random.choice(list(cards.keys()))
 print("Your cards are:", deal, "; ", deal1)
-print("You are at: ", [deal + deal1])
+print("You are at: ", (deal + deal1))
+
+#player turn
 answer = input("Will you hit or stay? ")
 
-if answer == "hit":
+while answer == "hit":
     deal2 = random.choice(list(cards.keys()))
     print(deal2)
-else:
-    print("delers turn")
+    answer = input("Will you hit or stay? ")
+    if answer == "stay":
+        print("end of turn")
+    else:
+        pass
+if deal == 'Ace of Diamonds' and 'Ace of Hearts' and 'Ace of Clubs' and 'Ace of Spades':
+    ACE = input("Do you want Ace to be 1 or 11?" )
+    if ACE == 1:
+        deal + 1
+    elif ACE == 11:
+        deal + 11
+    else:
+        pass    
+else: 
+    pass  
+
+
+
+
+#dealers turn
+
+     
 
