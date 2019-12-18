@@ -89,6 +89,13 @@ else:
     pass    
 
 #dealers turn
+'''
+in the dealers turn it first checks to see if the player bust
+if so, it will end the code becasue the dealer automaticly wins
+it then goes on to give the dealer two random cards and adds them up.
+it then checks to see if you got an ace, if so, it will see if it can add 11 to your
+total. if you go over 21 it will subract 10 from the total making the card 1
+'''
 if total > 21:
     print("Dealer wins!")
     exit()
@@ -116,7 +123,13 @@ if deal_tur1 == 1:
 else:
     pass
 print("Dealer Total is: ", deal_tot)
-
+'''
+it will then start a while loop where if the total is less than or 
+equal to 16, it will give the dealer another card then it will add it
+to the total. nested inside is an if statement that checks to see if the 
+dealer goes over 21, if so it will print the dealer bust then break the loop
+if the dealer total is over 17 the dealer can stay
+'''
 
 while deal_tot <= 16:
     deal_tur2 = random.choice(list(cards.items()))[1]
@@ -133,7 +146,13 @@ while deal_tot <= 16:
 
  
 #finding winner
-
+'''
+this will check to see if the player total is less than the 
+dealer total. if that is the case it will print dealer wins
+if the dealer total is less than the player total, it will
+print out player wins if both to the totals are equal to one
+another it will call the game a push. 
+'''
 if deal_tot > total:
     print("dealer wins!")
 elif deal_tot < total:
